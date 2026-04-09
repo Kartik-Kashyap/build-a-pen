@@ -52,7 +52,36 @@ const PenIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none
 const ForkIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" /><path d="M7 2v20" /><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" /></svg>;
 const ToasterIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="9" width="20" height="10" rx="2" /><path d="M8 9V5a2 2 0 0 1 4 0v4" /><path d="M12 9V5a2 2 0 0 1 4 0v4" /><path d="M6 19v2" /><path d="M18 19v2" /></svg>;
 const CanIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3h12l1 3H5L6 3z" /><path d="M5 6h14v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6z" /><path d="M9 6v14" /><path d="M15 6v14" /></svg>;
-const HardDiskIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2" /><circle cx="12" cy="12" r="3" /><path d="M12 15v3" /><path d="M20 8v.01" /></svg>;
+const HardDiskIcon = () => (
+  <svg 
+    width="20" 
+    height="20" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="1.5" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    {/* The outer rectangular casing (3.5" drive shape) */}
+    <rect x="5" y="2" width="14" height="20" rx="2" />
+    
+    {/* The circular platter */}
+    <circle cx="12" cy="9" r="5" />
+    
+    {/* The spindle center */}
+    <circle cx="12" cy="9" r="1" />
+    
+    {/* The actuator arm (Read/Write head) */}
+    <path d="M15 19l-3-6" />
+    
+    {/* The actuator pivot point */}
+    <circle cx="16" cy="19" r="1" />
+    
+    {/* Subtle screw details in corners */}
+    <path d="M7 4h.01M17 4h.01M7 20h.01M17 20h.01" opacity="0.5" />
+  </svg>
+);
 
 const initialProducts: Product[] = [
   { id: 'pen', label: 'Pen', icon: <PenIcon />, available: true },
